@@ -5,6 +5,7 @@ The project was designed to learn specific elements of Data Science and Machine 
 to predict the price of WTI Crude Oil in the for the summer months in 2017. 
 
 The data for this project will be compiled from multiple sources. 
+- main source is U.S. Energy Information Adminstration (EIA)
 
 # Requrements
 The requirements for this project can be found in the requirements.txt file.  
@@ -16,4 +17,5 @@ run: python3.6 -m venv virutal_environment_folder_name
 
 once in virtual environment install python3.6 packages
 run: pip install -r requirements.txt
+
 
