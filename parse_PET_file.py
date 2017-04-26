@@ -17,7 +17,7 @@ js_data = [json.loads(x) for x in contents]
 def monthly_data(items):
 	#iterate k:v pair in dicitonary
 	for key,value in item.items():
-		#boolean for key		
+		#boolean for key
 		# print (key,value)
 		if key == 'category_id':
 			continue
@@ -26,20 +26,15 @@ def monthly_data(items):
 			for k,v in item.items():
 				if k == 'data':
 					dates = [x[:4]+'/'+x[4:] for x in np.array(v)[:,0]]
-
 					data_points = np.array(v)[:,1]
 					# print (type(data_points[:,0]))
+					df = pd.DataFrame(data_points,index=dates,columns=[value])
 
-					df = (pd.DataFrame(data_points,index=dates,columns=[value]).head()
-						    
-						 )
 					df= df.reset_index()
 					df['index'] = pd.to_datetime(df['index']) + MonthEnd(1)
 					df= df.set_index('index')
 					return df
-					
 
-			
 #iterate list of dictionaries
 data=[]
 for item in js_data:
