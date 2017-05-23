@@ -46,7 +46,7 @@ json_file.close()
 js_data = [json.loads(x) for x in contents]
 
 
-# function 
+# function
 def monthly_data(items):
 	#iterate k:v pair in dicitonary
 	for key,value in item.items():
@@ -59,6 +59,7 @@ def monthly_data(items):
 			####show example of data####
 			for k,v in item.items():
 				if k == 'data':
+                    # Parse dates from array[:,0] for datetime index
 					dates = [x[:4]+'/'+x[4:] for x in np.array(v)[:,0]]
 					data_points = np.array(v)[:,1]
 					# print (type(data_points[:,0]))
