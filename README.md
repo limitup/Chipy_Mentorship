@@ -10,12 +10,12 @@ The data for this project will be compiled from multiple sources.
 # Requrements
 The requirements for this project can be found in the requirements.txt file.  
 
-Setup with a virtual environment in python 3.6
+Setup with a virtual environment in python3
 
 type terminal command
-run: python3.6 -m venv virutal_environment_folder_name
+run: python3 -m venv virutal_environment_folder_name
 
-once in virtual environment install python3.6 packages
+once in virtual environment install python3 packages
 run: pip install -r requirements.txt
 
 
